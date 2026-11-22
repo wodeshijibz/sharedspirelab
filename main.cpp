@@ -31,20 +31,36 @@ void pick_max() {
     (void)m;
 }
 
+void vector_reverse() {
+    std::vector<int> values;
+    values.push_back(1);
+    values.push_back(2);
+    values.push_back(3);
+    std::vector<int> rev;
+    for (std::size_t i = values.size(); i > 0; --i) rev.push_back(values[i - 1]);
+    (void)rev;
+}
+
+void collect_triples() {
+    std::vector<int> values;
+    for (int i = 1; i <= 5; ++i) values.push_back(i * 3);
+    int total = 0;
+    for (std::size_t i = 0; i < values.size(); ++i) total += values[i];
+    (void)total;
+}
+
 extern "C" int sable_thicket();
-extern "C" void subtle_meadow();
-extern "C" void frost_delta();
-extern "C" void gentle_compass();
-extern "C" void vivid_haven();
+extern "C" void quiet_haven();
+extern "C" void mellow_ember();
 
 int main() {
     is_prime();
     xor_checksum();
     shift_left();
     pick_max();
-    subtle_meadow();
-    frost_delta();
-    gentle_compass();
-    vivid_haven();
+    vector_reverse();
+    collect_triples();
+    quiet_haven();
+    mellow_ember();
     return sable_thicket();
 }
